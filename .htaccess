@@ -1,0 +1,21 @@
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{HTTP_USER_AGENT} Feedfetcher-Google [OR]
+RewriteCond %{HTTP_USER_AGENT} FlipboardRSS [OR]
+RewriteCond %{HTTP_USER_AGENT} FeedBurner
+RewriteRule .* - [R=403,NC,L]
+
+RewriteRule ^xmlrpc.php - [R=404,NC,L]
+RewriteRule ^garfield\/rss\.php - [R=404,NC,L]
+RewriteRule ^feed - [R=404,NC,L]
+
+RewriteCond %{HTTP_HOST} !^ivanov\.in$
+RewriteRule ^(.*)$ https://ivanov.in/$1 [L,R=301]
+
+#RewriteCond %{HTTPS} !on
+#RewriteRule ^(.*)$ https://ivanov.in/$1 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* /#%{REQUEST_URI} [L,R=301,NE,QSA]

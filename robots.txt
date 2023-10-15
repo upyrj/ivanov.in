@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /twi
+Disallow: /igo
+Host: ivanov.in
+Clean-param: p&f&n&c

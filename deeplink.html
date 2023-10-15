@@ -1,0 +1,64 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="canonical" href="https://ivanov.in" />
+    <link rel="apple-touch-icon" href="//ivanov.in/img/denis-ivanov.gif"> 
+    <meta name="viewport" content="width=320,user-scalable=false"> 
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <title>boltfood://</title>
+    <style>
+        #outer {
+            height: 100%;
+            width: 100%;
+            display: table;
+            vertical-align: middle;
+        }
+        #middle {
+            text-align: center;
+            position: relative;
+            vertical-align: middle;
+            display: table-cell;
+            height: 100%;
+        }
+        #inner {
+            text-align: left;
+            margin: 0 auto 0 auto;
+            max-width: 320px;
+            padding-bottom: 120px;
+            line-height: 20px;
+        }
+body, input {font-family: sans-serif, font-size:12px}
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <div id="middle">
+            <div id="inner">
+				<form>
+					boltfood://<input name="q" id="q" value="" style="width:220px">
+					<p align="middle">
+						<input type="submit"/>
+					</p>
+					<a id="link" href="#">link</a>
+				</form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<script>
+
+q = decodeURIComponent(window.location.search.replace("?q=",""));
+loc = "boltfood://"+q;
+document.getElementById("link").innerHTML=loc;
+document.getElementById("link").href=loc;
+document.getElementById("q").value=q;
+
+</script>
+
+</body>
+
+</html>
