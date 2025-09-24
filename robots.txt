@@ -2,13 +2,11 @@ User-agent: *
 Disallow: /twi
 Disallow: /igo
 Disallow: /.
-Disallow: /ind
 Disallow: /d
-Disallow: /f
 Disallow: /g
 Disallow: /i
-Disallow: /r
 Disallow: /y
-Disallow: /c
+Disallow: /C
 Host: ivanov.in
 Clean-param: p&f&n&c
+
